@@ -1,0 +1,17 @@
+.TITLE {
+    border-bottom: .1em solid white;
+}
+.workoutButtons {
+    display: inline-block;
+    background-color: darkslategray;
+    width: 100%;
+}
+.workoutButtons button{
+    width: 50%;
+    background-color: darkslategray;
+    color: white;
+}
+.workoutButtons button:focus{
+    background-color: yellow;
+    color: black;
+}

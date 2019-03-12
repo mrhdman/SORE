@@ -1,0 +1,11 @@
+.soreTitle {
+    border: .4em solid white;
+}
+.soreTitle button{
+    font-family: 'Times New Roman', Times, serif;
+    border: .8em solid black;
+    background-color: darkblue;
+    color: white;
+    text-shadow: -.14em -.14em black;
+    width: 100%;
+}

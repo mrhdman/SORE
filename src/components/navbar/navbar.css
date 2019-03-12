@@ -1,0 +1,25 @@
+.navbarContainer {
+    margin: auto;
+    width: 80%;
+    border: .4em solid white;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+}
+.navbarContainer div{
+    width: 100%;
+}
+.navbarRow div{
+    display: inline-block;
+    width: 50%;
+}
+.navbarContainer button{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: white;
+    text-shadow: .1em .1em black;
+    color: black;
+    border: .4em solid black;
+    width: 100%;
+}
+.navbarContainer button:focus{
+    background-color: yellow;
+}

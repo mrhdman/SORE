@@ -1,0 +1,17 @@
+.titleGoesHere {
+    max-width: 100%;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    border: .4em solid white;
+}
+.titleGoesHere div {
+    display: inline-block;
+    width: 50%;
+}
+.titleGoesHere button {
+    background-color: white;
+    font-family: cursive;
+    width: 100%;
+    border: .4em solid black;
+    text-shadow: .1em .1em black;
+}

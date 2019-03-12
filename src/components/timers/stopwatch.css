@@ -1,0 +1,59 @@
+.stopwatchContainer {
+    font-family: 'Courier New', Courier, monospace;
+    width: 80%;
+    margin: auto;
+    /* padding-top: .2rem;
+    padding-bottom: .2rem; */
+}
+
+.clock-container div{
+    display: inline-block;
+    text-shadow: .03em .03em white;
+    color: white;
+    font-size: 2rem;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    border-radius: 20%;
+}
+.button-container div{
+    display: inline-block;
+    border-radius: 20%;
+}
+.button-container button{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 35%;
+    font-size: 1.6rem;
+    text-shadow: -.08em -.08em black;
+}
+.start-btn {
+    margin-right: 1rem;
+    background-color: white;
+    color: black;
+
+}
+.stop-btn {
+    margin-left: 1rem;
+    background-color: white;
+    color: black;
+}
+.bottom-button-container div{
+    display: inline-block;
+}
+.top-button-container div{
+    display: inline-block;
+}
+.timerButtons {
+    display: inline-block;
+    background-color: darkslategray;
+    width: 100%;
+}
+.timerButtons button{
+    width: 50%;
+    background-color: darkslategray;
+    color: white;
+}
+.timerButtons button:focus{
+    background-color: yellow;
+    color: black;
+}
