@@ -9,7 +9,7 @@ class Navbar extends Component{
             <div className="navbarContainer">
                 <div className="navbarRow">
                     <div className="workoutButtonContainer">
-                        <Link to="/workout"><button className="workoutButton"><h2>WORKOUT</h2></button></Link>
+                        <Link to="/workout"><button className="workoutButton"><h2>WORKOUTS</h2></button></Link>
                     </div>
                     <div className="timerButtonContainer">
                         <Link to="/timer"><button className="timerButton"><h2>TIMER</h2></button></Link>

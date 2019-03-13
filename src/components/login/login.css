@@ -15,6 +15,7 @@
     height: 4rem;
     font-size: 2rem;
     font-family: cursive;
+    border: .2rem double black;
     border-radius: 15%;
     text-shadow: .1rem .1rem black;
 }

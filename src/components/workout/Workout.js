@@ -12,7 +12,7 @@ class Workout extends Component{
         return(
             <Router>
             <div className="quadChildrenContainer">
-                <h1 className="TITLE">WORKOUT</h1>
+                <h1 className="TITLE">WORKOUTS</h1>
                 <div className="workoutButtons">
                     <Link to="/workout/browse"><button className="browseButton"><h2>BROWSE</h2></button></Link>
                     <Link to="/workout/create"><button className="createButton"><h2>CREATE</h2></button></Link>

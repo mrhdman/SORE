@@ -25,6 +25,7 @@ class CreateWorkout extends Component{
     render(){
         return(
             <div className ="createWorkoutContainer">
+                <h1 className="TITLE">CREATE WORKOUTS</h1>
                 <form onSubmit={this.createWorkoutSubmit}>
                     <div>
                         name-------<input type='name' name='name' id='name' placeholder='Bench Press' />

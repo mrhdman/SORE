@@ -67,7 +67,7 @@ class Register extends Component{
                             <input className='validate' type='password' name='password' id='password' placeholder="password"/>
                         </div>
                         <div className="createAccountButtonContainer">
-                            <button type='submit' name='createAccountButton'>Create Account</button>
+                            <button type='submit' name='createAccountButton'>create account</button>
                         </div>
                     </form>
                 </div>

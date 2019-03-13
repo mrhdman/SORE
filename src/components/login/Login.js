@@ -64,15 +64,10 @@ class Login extends Component{
                             <input className='validate' type='password' name='password' id='password' placeholder="password"/>
                         </div>
                         <div className="loginButtonContainer">
-                            <button type='submit' name='createAccountButton'>Login</button>
+                            <button type='submit' name='createAccountButton'>login</button>
                         </div>
                     </form>
-                    <div className="newUserCreateAccount">
-                        <Link to="/register">New user? Create Account</Link>
-                    </div>
                 </div>
-                <div className="section"></div>
-                <div className="section"></div>
             </main>
         )
     }

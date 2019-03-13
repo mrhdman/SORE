@@ -1,11 +1,155 @@
+.childrenInlineBlock div{
+    display: inline-block;
+}
 .soreTitle {
-    border: .4em solid white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: .4em double white;
+    border-radius: 50%;
+    display: inline-block;
 }
 .soreTitle button{
-    font-family: 'Times New Roman', Times, serif;
-    border: .8em solid black;
-    background-color: darkblue;
-    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: .4rem double black;
+    background-color: white;
+    color: black;
     text-shadow: -.14em -.14em black;
     width: 100%;
+    border-radius: 50%;
+}
+.leftForearmFistContainer {
+    transform: rotate(45deg);
+    transform-origin: 5rem;
+    animation: leftFlexAnimation 10s infinite;
+}
+.rightForearmFistContainer {
+    transform: rotate(-45deg);
+    transform-origin: 0rem;
+    animation: rightFlexAnimation 10s infinite;
+}
+
+.leftBicep {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    animation: leftBicepAnimation 10s infinite;
+}
+.rightBicep {
+    width: 2rem;
+    height: 2rem;
+    background-color: white;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    animation: rightBicepAnimation 10s infinite;
+}
+.leftForearm {
+    width: 2rem;
+    height: .7rem;
+    background-color: white;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    transform: matrix()
+}
+.rightForearm {
+    width: 2rem;
+    height: .7rem;
+    background-color: white;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 30%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 30%;
+}
+.leftFist {
+    width: .6rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateY(1rem)
+}
+.rightFist {
+    width: .6rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateY(1rem)
+}
+
+@keyframes leftFlexAnimation {
+    0% {
+        transform: rotate(70deg);
+        transform-origin: 3rem;
+    }
+    50% {
+        transform: rotate(0deg);
+        transform-origin: 3rem;
+    }
+    100% {
+        transform: rotate(70deg);
+        transform-origin: 3rem;
+    }
+}
+@keyframes rightFlexAnimation {
+    0% {
+        transform: rotate(-70deg);
+        transform-origin: 0rem;
+    }
+    50% {
+        transform: rotate(0deg);
+        transform-origin: 0rem;
+    }
+    100% {
+        transform: rotate(-70deg);
+        transform-origin: 0rem;
+    }
+}
+@keyframes leftBicepAnimation {
+    0% {
+        width: 1rem;
+        height: 1rem;
+    }
+    50% {
+        width: 2rem;
+        height: 1rem;
+    }
+    100% {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+@keyframes rightBicepAnimation {
+    0% {
+        width: 1rem;
+        height: 1rem;
+    }
+    50% {
+        width: 2rem;
+        height: 1rem;
+    }
+    100% {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 500px){
+    /* .soreTitle {
+        border: none;
+        border-radius: 50%;
+    } */
+    /* .soreTitle button{
+        border: none;
+        font-size: .2rem;
+        border-radius: 50%;
+        background-color: black;
+        color: white;
+    } */
 }

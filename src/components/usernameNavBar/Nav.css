@@ -1,0 +1,15 @@
+.loginOrRegister {
+    color: white;
+}
+a:link {
+    color: white;
+}
+a:visited {
+    color: white;
+}
+a:hover {
+    color: darkslategray;
+}
+a:active {
+    color: yellow;
+}

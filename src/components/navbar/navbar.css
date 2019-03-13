@@ -1,7 +1,7 @@
 .navbarContainer {
     margin: auto;
     width: 80%;
-    border: .4em solid white;
+    border: .4em double white;
     padding-top: .2rem;
     padding-bottom: .2rem;
 }
@@ -17,7 +17,7 @@
     background-color: white;
     text-shadow: .1em .1em black;
     color: black;
-    border: .4em solid black;
+    border: .4em double black;
     width: 100%;
 }
 .navbarContainer button:focus{

@@ -2,7 +2,7 @@
     max-width: 100%;
     padding-top: .2rem;
     padding-bottom: .2rem;
-    border: .4em solid white;
+    border: .4em double white;
 }
 .titleGoesHere div {
     display: inline-block;
@@ -12,6 +12,6 @@
     background-color: white;
     font-family: cursive;
     width: 100%;
-    border: .4em solid black;
+    border: .4em double black;
     text-shadow: .1em .1em black;
 }

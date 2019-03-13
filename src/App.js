@@ -17,6 +17,8 @@ import Timer from './components/timers/Timer';
 import Planner from './components/planner/Planner';
 import Log from './components/log/Log';
 
+import LogEntry from './components/utility/LogEntry';
+
 
 
 class App extends Component {
@@ -26,7 +28,7 @@ class App extends Component {
         <div className="App">
           <Sore />
           <Headers />
-          <TitleBanner />
+          {/* <TitleBanner /> */}
           <Navbar />
           <div className="container">
             <Route exact path="/" />
@@ -36,6 +38,7 @@ class App extends Component {
             <Route exact path="/timer" component={Timer} />
             <Route exact path="/planner" component={Planner} />
             <Route exact path="/log" component={Log} />
+            <Route exact path="/log/logentry" component={LogEntry} />
             {/* <Route exact path="/log/:id" component={Log} /> */}
           </div>
         </div>

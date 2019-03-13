@@ -21,7 +21,7 @@ class LoginNavBar extends Component{
             rightNavBar = <span>Enjoy your workout, {this.props.auth.username}</span>
         }else{
             // user is not logged in
-            rightNavBar = <span>
+            rightNavBar = <span className="loginOrRegister">
                 <Link to="/login">login</Link> or <Link to="/register">register</Link>
             </span>
         }
