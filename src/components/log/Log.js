@@ -37,14 +37,17 @@ componentDidMount(){
                     <thead>
                         <tr className="firstRow">
                             <th>NAME</th>
-                            <th>LENGTH</th>
+                            <th>TIME</th>
                             <th>DATE</th>
+                            <th>WEIGHT</th>
+                            <th>SETS</th>
+                            <th>REPS</th>
                             <th>NOTES</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        {rows}
+                            {rows}
                     </tbody>
                 </table>
             </div>

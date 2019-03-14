@@ -23,6 +23,9 @@ class WorkoutEntry extends Component{
     }
 
     render(){
+    const start = ""
+    const stop = ""
+    const time = "00:00:00"
     const row = this.props.row;
     return(
         <tr>
@@ -31,7 +34,10 @@ class WorkoutEntry extends Component{
             <th className="repsRow">{row.reps}</th>
             <th className="weightRow">{row.weight}</th>
             <th className="notesRow">{row.notes}</th>
-            <th className="deleteRow" id={row.id} onClick={this.trash} >TRASH</th>
+            <th className="startRow">{start}</th>
+            <th className="timeRow">{time}</th>
+            <th className="stopRow">{stop}</th>
+            <th className="deleteRow" id={row.id} onClick={this.trash} >DEL</th>
         </tr>
         )
     }

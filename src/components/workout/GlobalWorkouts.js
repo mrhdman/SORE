@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GlobalWorkoutEntry from '../utility/GlobalWorkoutEntry';
 import axios from 'axios';
+import './workout.css';
 
 class GlobalWorkouts extends Component{
     constructor(){
@@ -35,6 +36,9 @@ componentDidMount(){
                             <th>REPS</th>
                             <th>WEIGHT</th>
                             <th>NOTES</th>
+                            <th>START</th>
+                            <th>TIME</th>
+                            <th>STOP</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,6 +49,5 @@ componentDidMount(){
         )
     }
 }
-
 
 export default GlobalWorkouts;

@@ -24,6 +24,7 @@ componentDidMount(){
 }
 
     render(){
+
         console.log(this.props)
         const workoutRows = this.props.workouts.map((row,i) => {
             console.log(workoutRows)
@@ -41,7 +42,10 @@ componentDidMount(){
                             <th>REPS</th>
                             <th>WEIGHT</th>
                             <th>NOTES</th>
-                            <th></th>
+                            <th>START</th>
+                            <th>TIME</th>
+                            <th>STOP</th>
+                            <th>DELETE</th>
                         </tr>
                     </thead>
                     <tbody>

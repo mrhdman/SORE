@@ -35,7 +35,7 @@ class CreateWorkout extends Component{
                             <th>name</th>
                         </tr>
                         <tr className="inputRow">
-                            <th><input type='name' name='name' id='name' defaultValue='Bench' /></th>
+                            <th><input type='name' name='name' id='name' maxlength="21" defaultValue='Bench' /></th>
                         </tr>
                         <tr className="notInputRow">
                             <th>sets</th>
@@ -59,7 +59,7 @@ class CreateWorkout extends Component{
                             <th>notes</th>
                         </tr>
                         <tr className="inputRow">
-                            <th><input type='text' name='notes' id='notes' defaultValue='HEAVY' /></th>
+                            <th><input type='text' name='notes' id='notes' maxlength="31" defaultValue='HEAVY' /></th>
                         </tr>
                     </table>
                     <div className="createWorkoutButtonContainer">

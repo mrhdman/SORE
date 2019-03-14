@@ -29,8 +29,11 @@ class LogEntry extends Component{
             <th className="nameRow">{row.name}</th>
             <th className="timeRow">{row.llength}</th>
             <th className="dateRow">{row.date}</th>
+            <th className="setsRow">{row.sets}</th>
+            <th className="repsRow">{row.reps}</th>
+            <th className="weightRow">{row.weight}</th>
             <th className="notesRow">{row.notes}</th>
-            <th className="deleteRow" id={row.id} onClick={this.trash} >TRASH</th>
+            <th className="deleteRow" id={row.id} onClick={this.trash} >DEL</th>
         </tr>
         )
     }

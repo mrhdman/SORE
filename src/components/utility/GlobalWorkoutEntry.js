@@ -4,6 +4,7 @@ import axios from 'axios';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import getPersonalWorkouts from '../../actions/getPersonalWorkouts';
+import StopWatch from '../timers/StopWatch';
 
 class GlobalWorkoutEntry extends Component{
     constructor(){
@@ -24,6 +25,9 @@ class GlobalWorkoutEntry extends Component{
 
     render(){
     const row = this.props.row;
+    const start = ""
+    const stop = ""
+    const time = "00:00:00"
     return(
         <tr>
             <th className="nameRow">{row.name}</th>
@@ -31,6 +35,9 @@ class GlobalWorkoutEntry extends Component{
             <th className="repsRow">{row.reps}</th>
             <th className="weightRow">{row.weight}</th>
             <th className="notesRow">{row.notes}</th>
+            <th className="startRow">{start}</th>
+            <th className="timeRow">{time}</th>
+            <th className="stopRow">{stop}</th>
             {/* <th className="deleteRow" id={row.id} onClick={this.trash} >TRASH</th> */}
         </tr>
         )

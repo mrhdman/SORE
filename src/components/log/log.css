@@ -16,7 +16,7 @@ tbody{
     font-size: .8rem;
 }
 .firstRow th{
-    font-size: .8rem;
+    font-size: .4rem;
     border: none;
 }
 table tr:nth-child(even){
@@ -25,13 +25,40 @@ table tr:nth-child(even){
 }
 th {
     border: .001rem solid white;
+    font-size: .6rem;
 }
 .nameRow {
     height: 4rem;
     width: 4rem;
+    cursor: pointer;
+}
+.setsRow {
+    height: 2rem;
+    width: 2rem;
+}
+.repsRow {
+    height: 2rem;
+    width: 2rem;
+}
+.weightRow {
+    height: 2rem;
+    width: 2rem;
+}
+.startRow {
+    height: 2rem;
+    width: 2rem;
+    background-color: green;
+    cursor: pointer;
+}
+.stopRow {
+    height: 2rem;
+    width: 2rem;
+    background-color: red;
+    cursor: pointer;
 }
 .deleteRow {
-    background-color: red;
-    color: white;
+    background-color: darkred;
+    color: yellow;
+    text-shadow: .1rem .1rem black;
     cursor: pointer;
 }

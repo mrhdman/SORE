@@ -92,7 +92,7 @@ class StopWatch extends Component{
             <h1 className="TITLE">STOPWATCH</h1>
             <form onSubmit={this.submitToLog}>
                 <div>
-                    <input type='name' name='name' id='name' defaultValue='Name' />
+                    <input type='name' name='name' id='name' maxlength="21" defaultValue='Name' />
                 </div>
                 <div className="buttonsAndClockContainer">
                     <div className="top-button-container">
@@ -144,7 +144,7 @@ class StopWatch extends Component{
                     </div>
                 </div>
                 <div>
-                    <input type='text' name='notes' id='notes' defaultValue='notes' />
+                    <input type='text' name='notes' id='notes' maxlength="31" defaultValue='notes' />
                 </div>
             </form>
                 <div className="button-container">
