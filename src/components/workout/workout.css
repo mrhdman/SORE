@@ -16,3 +16,17 @@
     background-color: yellow;
     color: black;
 }
+.createWorkoutButtonContainer button{
+    border: .4rem double black;
+    font-size: .8rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+.createWorkoutTable {
+    width: 50%;
+}
+.createWorkoutTable input{
+    text-align: center;
+    font-size: 1rem;
+}

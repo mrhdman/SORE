@@ -18,7 +18,7 @@ class LoginNavBar extends Component{
         let rightNavBar = "";
         if(this.props.auth.username !== undefined){
             // user is logged in
-            rightNavBar = <span>Enjoy your workout, {this.props.auth.username}</span>
+            rightNavBar = <span>Hello, {this.props.auth.username}.</span>
         }else{
             // user is not logged in
             rightNavBar = <span className="loginOrRegister">

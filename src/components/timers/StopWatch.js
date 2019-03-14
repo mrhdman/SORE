@@ -91,64 +91,62 @@ class StopWatch extends Component{
         <div className="stopwatchContainer">
             <h1 className="TITLE">STOPWATCH</h1>
             <form onSubmit={this.submitToLog}>
-
-                <div className="top-button-container">
-                    <div className="button-container">
-                        <div className="start-button">
-                            <button className="start-btn" type='button' onClick={this.startButtonClicked}>START</button>
+                <div>
+                    <input type='name' name='name' id='name' placeholder='Insert Name' />
+                </div>
+                <div className="buttonsAndClockContainer">
+                    <div className="top-button-container">
+                        <div className="button-container">
+                            <div className="start-button">
+                                <button className="start-btn" type='button' onClick={this.startButtonClicked}></button>
+                            </div>
+                        </div>
+                        <div className="button-container">
+                            <div className="log-button">
+                                <button className="log-btn" type='submit' onClick={this.logButtonClicked}>LOG</button>
+                            </div>
                         </div>
                     </div>
-                    <div className="button-container">
-                        <div className="log-button">
-                            <button className="log-btn" type='submit' onClick={this.logButtonClicked}>LOG</button>
+
+                        <div className="clock-container" type='llength' id='llength'>
+                            <span className="hours">{(hours < 10)
+                                ?
+                                `0${hours}`
+                                :
+                                `${hours}`}
+                            </span>
+                            <span className="minutes">{(minutes < 10)
+                                ?
+                                `:0${minutes}:`
+                                :
+                                `:${minutes}:`}
+                            </span>
+                            <span className="seconds">{(seconds < 10)
+                                ?
+                                `0${seconds}`
+                                :
+                                `${seconds}`}
+                            </span>
+                        </div>
+                    <div className="bottom-button-container">
+                        <div className="button-container">
+                            <div className="reset-button">
+                                <button className="reset-btn" type='button' onClick={this.resetButtonClicked}>RESET</button>
+                            </div>
+                        </div>
+                    
+
+                        <div className="button-container">
+                            <div className="stop-button">
+                                <button className="stop-btn" type='button' onClick={this.stopButtonClicked}></button>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                    <div>
-                        <input type='name' name='name' id='name' placeholder='Insert Name' />
-                    </div>
-
-                    <div className="clock-container" type='llength' id='llength'>
-                        <span className="hours">{(hours < 10)
-                            ?
-                            `0${hours}`
-                            :
-                            `${hours}`}
-                        </span>
-                        <span className="minutes">{(minutes < 10)
-                            ?
-                            `:0${minutes}:`
-                            :
-                            `:${minutes}:`}
-                        </span>
-                        <span className="seconds">{(seconds < 10)
-                            ?
-                            `0${seconds}`
-                            :
-                            `${seconds}`}
-                        </span>
-                    </div>
-
-                    <div>
-                        <input type='text' name='notes' id='notes' placeholder='notes' />
-                    </div>
-
-                </form>
-                <div className="bottom-button-container">
-                    <div className="button-container">
-                        <div className="reset-button">
-                            <button className="reset-btn" type='button' onClick={this.resetButtonClicked}>RESET</button>
-                        </div>
-                    </div>
-                
-
-                    <div className="button-container">
-                        <div className="stop-button">
-                            <button className="stop-btn" type='button' onClick={this.stopButtonClicked}>STOP</button>
-                        </div>
-                    </div>
+                <div>
+                    <input type='text' name='notes' id='notes' placeholder='notes' />
                 </div>
+            </form>
         </div>
         )
     }
