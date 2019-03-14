@@ -1,11 +1,71 @@
 import React, { Component } from 'react';
+import WorkoutEntry from '../utility/WorkoutEntry';
+import axios from 'axios';
+import './workout.css';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import getPersonalWorkouts from '../../actions/getPersonalWorkouts';
 
-function PersonalWorkouts(props){
-    return(
-        <div className ="personalWorkoutsContainer">
-            <h3>Personal Workouts coming soon!</h3>
-        </div>
-    )
+
+class PersonalWorkouts extends Component{
+    constructor(){
+        super();
+        this.state = {
+            workouts: []
+        }
+    }
+
+componentDidMount(){
+    // console.log(this.props.auth)
+    if (this.props.auth.token){
+        // console.log("test2")
+        const data = this.props.getPersonalWorkouts(this.props.auth.token);
+        console.log(data)
+    }
 }
 
-export default PersonalWorkouts;
+    render(){
+        console.log(this.props)
+        console.log(workouts)
+        const workoutRows = this.props.workouts.map((row,i) => {
+            console.log(row)
+            return(
+                <WorkoutEntry key={i} row={row} />
+            )
+            })
+        return(
+            <div className="workoutTable">
+                <table>
+                    <thead>
+                        <tr className="firstRow">
+                            <th>NAME</th>
+                            <th>SETS</th>
+                            <th>REPS</th>
+                            <th>WEIGHT</th>
+                            <th>NOTES</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {workoutRows}
+                    </tbody>
+                </table>
+            </div>
+        )
+    }
+}
+
+
+function mapStateToProps(state){
+    return {
+        auth: state.auth,
+        workouts: state.personalWorkouts
+    }
+}
+function mapDispatchToProps(dispatcher){
+    return bindActionCreators({
+        getPersonalWorkouts: getPersonalWorkouts
+    },dispatcher)
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(PersonalWorkouts);

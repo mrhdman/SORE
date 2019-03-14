@@ -5,16 +5,33 @@
 }
 .logTable {
     width: 100%;
+    margin: auto;
 }
-table *{
+table {
+    width: 100%;
+    margin: auto;
+}
+tbody{
     text-align: center;
-    font-size: .7rem;
+    font-size: .6rem;
 }
-.firstRow {
-    /* border-bottom: .1rem */
+.firstRow th{
+    font-size: .8rem;
+    border: none;
+}
+table tr:nth-child(even){
     background-color: white;
     color: black;
 }
 th {
-    border: .1em solid white;
+    border: .001rem solid white;
+}
+.nameRow {
+    height: 4rem;
+    width: 4rem;
+}
+.deleteRow {
+    background-color: red;
+    color: white;
+    cursor: pointer;
 }

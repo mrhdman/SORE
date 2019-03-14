@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import createWorkoutAction from '../../actions/createWorkoutAction';
 import { connect } from 'react-redux';
 import './workout.css';
+// import getPersonalWorkouts from '../../actions/getPersonalWorkouts';
 
 class CreateWorkout extends Component{
 
@@ -18,7 +19,8 @@ class CreateWorkout extends Component{
             sets,
             reps,
             weight,
-            notes
+            notes,
+            username: this.props.auth.username
         })
     }
 
@@ -53,12 +55,14 @@ class CreateWorkout extends Component{
 
 function mapStateToProps(state){
     return {
-        addWorkout: state.addWorkout
+        addWorkouts: state.addWorkouts,
+        auth: state.auth
     }
 }
 function mapDispatchToProps(dispatcher){
     return bindActionCreators({
-        createWorkoutAction: createWorkoutAction
+        createWorkoutAction: createWorkoutAction,
+        // getPersonalWorkouts: getPersonalWorkouts
     },dispatcher)
 }
 

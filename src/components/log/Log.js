@@ -1,25 +1,10 @@
 import React, { Component } from 'react';
 import LogEntry from '../utility/LogEntry';
 import axios from 'axios';
-import { withStyles } from '@material-ui/core/styles';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
-import Paper from '@material-ui/core/Paper';
-
-const styles = theme => ({
-    root: {
-      width: '100%',
-      marginTop: theme.spacing.unit * 3,
-      overflowX: 'auto',
-    },
-    table: {
-      minWidth: 700,
-    },
-  });
-
+import './log.css'
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import getPersonalLog from '../../actions/getPersonalLog';
 
 
 class Log extends Component{
@@ -31,41 +16,26 @@ class Log extends Component{
     }
 
 componentDidMount(){
-    const data = axios.get(`${window.apiHost}/timelog/getalltime`)
-    data.then((response)=>{
-        // console.log(response.data)
-        this.setState({
-            logs: response.data
-        })
-    })
+    // console.log(this.props.auth)
+    if (this.props.auth.token){
+        // console.log("test2")
+        const data = this.props.getPersonalLog(this.props.auth.token);
+    }
 }
 
     render(){
-        const classes = {
-            root: "main-table",
-            table: "table"
-        }
-
-        const rows = this.state.logs.map((row,i) => {
+        console.log(this.props)
+        const rows = this.props.logs.map((row,i) => {
+            console.log(row)
             return(
                 <LogEntry key={i} row={row} />
             )
             })
         return(
             <div className="logTable">
-            {/* <Paper className={classes.root}> */}
-                {/* <Table className={classes.table}> */}
-                    {/* <TableHead>
-                    <TableRow>
-                        <TableCell>NAME</TableCell>
-                        <TableCell align="right">LENGTH</TableCell>
-                        <TableCell align="right">DATE</TableCell>
-                        <TableCell align="right">NOTES</TableCell>
-                        <TableCell align="right"></TableCell>
-                    </TableRow>
-                    </TableHead> */}
+                <table>
                     <thead>
-                        <tr>
+                        <tr className="firstRow">
                             <th>NAME</th>
                             <th>LENGTH</th>
                             <th>DATE</th>
@@ -73,18 +43,26 @@ componentDidMount(){
                             <th></th>
                         </tr>
                     </thead>
-                    {/* <TableBody> */}
                     <tbody>
                         {rows}
                     </tbody>
-                    {/* </TableBody> */}
-                {/* </Table> */}
-                {/* </Paper> */}
+                </table>
             </div>
         )
     }
 }
 
 
+function mapStateToProps(state){
+    return {
+        auth: state.auth,
+        logs: state.personalLog
+    }
+}
+function mapDispatchToProps(dispatcher){
+    return bindActionCreators({
+        getPersonalLog: getPersonalLog
+    },dispatcher)
+}
 
-export default withStyles(styles)(Log);
+export default connect(mapStateToProps,mapDispatchToProps)(Log);

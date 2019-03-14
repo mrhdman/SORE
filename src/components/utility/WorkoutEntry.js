@@ -3,21 +3,21 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import getPersonalLog from '../../actions/getPersonalLog';
+import getPersonalWorkouts from '../../actions/getPersonalWorkouts';
 
-class LogEntry extends Component{
+class WorkoutEntry extends Component{
     constructor(){
         super();
         this.state={
-            log: []
+            workouts: []
         }
     }
 
     trash = (e)=>{
         // console.dir(e.target);
-        axios.get(`${window.apiHost}/personallog/trash/${e.target.id}`).then((response)=>{
+        axios.get(`${window.apiHost}/personalworkouts/trash/${e.target.id}`).then((response)=>{
             if(response.data.msg === "deleted"){
-                this.props.getPersonalLog(this.props.auth.token)
+                this.props.getPersonalWorkouts(this.props.auth.token)
             }
         })
     }
@@ -27,14 +27,16 @@ class LogEntry extends Component{
     return(
         <tr>
             <th className="nameRow">{row.name}</th>
-            <th className="timeRow">{row.llength}</th>
-            <th className="dateRow">{row.date}</th>
+            <th className="setsRow">{row.sets}</th>
+            <th className="repsRow">{row.reps}</th>
+            <th className="weightRow">{row.weight}</th>
             <th className="notesRow">{row.notes}</th>
             <th className="deleteRow" id={row.id} onClick={this.trash} >TRASH</th>
         </tr>
         )
     }
 }
+
 
 function mapStateToProps(state){
     return {
@@ -43,8 +45,8 @@ function mapStateToProps(state){
 }
 function mapDispatchToProps(dispatcher){
     return bindActionCreators({
-        getPersonalLog: getPersonalLog
+        getPersonalWorkouts: getPersonalWorkouts
     },dispatcher)
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(LogEntry);
+export default connect(mapStateToProps,mapDispatchToProps)(WorkoutEntry);

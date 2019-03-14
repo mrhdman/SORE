@@ -61,7 +61,8 @@ class StopWatch extends Component{
             name,
             llength,
             todaysDate,
-            notes
+            notes,
+            username: this.props.auth.username
         })
     }
     resetButtonClicked = e =>{
@@ -84,12 +85,11 @@ class StopWatch extends Component{
         let mm = date.getMonth() + 1;
         let yyyy = date.getFullYear();
         let todaysDate = mm + "/" + dd + "/" + yyyy;
+        // console.log(this.props.auth)
 
-        // console.log(todaysDate);
-        // console.log(time);
         return(
         <div className="stopwatchContainer">
-            <h1 className="TITLE">STOPwatch</h1>
+            <h1 className="TITLE">STOPWATCH</h1>
             <form onSubmit={this.submitToLog}>
 
                 <div className="top-button-container">
@@ -156,7 +156,8 @@ class StopWatch extends Component{
 
 function mapStateToProps(state){
     return {
-        addToLog: state.addToLog
+        addToLog: state.addToLog,
+        auth: state.auth
     }
 }
 function mapDispatchToProps(dispatcher){
