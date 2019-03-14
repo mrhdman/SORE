@@ -31,35 +31,35 @@ class CreateWorkout extends Component{
                 <h1 className="TITLE">CREATE WORKOUTS</h1>
                 <form onSubmit={this.createWorkoutSubmit}>
                     <table className="createWorkoutTable">
-                        <tr className="thisRowNeedsToBeCentered">
-                            <th>NAME</th>
+                        <tr className="notInputRow">
+                            <th>name</th>
                         </tr>
-                        <tr className="thisRowNeedsToBeCentered">
-                            <th><input type='name' name='name' id='name' placeholder='Bench Press' /></th>
+                        <tr className="inputRow">
+                            <th><input type='name' name='name' id='name' defaultValue='Bench' /></th>
                         </tr>
-                        <tr className="thisRowNeedsSmallerFont">
-                            <th>SETS</th>
+                        <tr className="notInputRow">
+                            <th>sets</th>
                         </tr>
-                        <tr className="thisRowNeedsSmallerFont">
+                        <tr className="inputRow">
                             <th><input type='number' name='sets' id='sets' min='0' defaultValue="5" /></th>
                         </tr>
-                        <tr className="thisRowNeedsSmallerFont">
-                            <th>REPS</th>
+                        <tr className="notInputRow">
+                            <th>reps</th>
                         </tr>
-                        <tr className="thisRowNeedsSmallerFont">
+                        <tr className="inputRow">
                             <th><input type='number' name='reps' id='reps' min='0' defaultValue="5" /></th>
                         </tr>
-                        <tr className="thisRowNeedsSmallerFont">
-                            <th>WEIGHT</th>
+                        <tr className="notInputRow">
+                            <th>weight</th>
                         </tr>
-                        <tr className="thisRowNeedsSmallerFont">
+                        <tr className="inputRow">
                             <th><input type='number' name='weight' id='weight' min='0' step='5' defaultValue="225" /></th>
                         </tr>
-                        <tr className="thisRowNeedsToBeCentered">
-                            <th>NOTES</th>
+                        <tr className="notInputRow">
+                            <th>notes</th>
                         </tr>
-                        <tr className="thisRowNeedsToBeCentered">
-                            <th><input type='text' name='notes' id='notes' placeholder='heavy' /></th>
+                        <tr className="inputRow">
+                            <th><input type='text' name='notes' id='notes' defaultValue='HEAVY' /></th>
                         </tr>
                     </table>
                     <div className="createWorkoutButtonContainer">
