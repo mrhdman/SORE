@@ -58,10 +58,10 @@ class Login extends Component{
                 <div className="loginContainer">
                     <form onSubmit={this.handleLogin}>
                         <div className='email-input-field'>
-                            <input className='validate' type='email' name='email' id='email' placeholder="email"/>
+                            <input className='validate' type='email' name='email' id='email' defaultValue="email"/>
                         </div>
                         <div className='password-input-field'>
-                            <input className='validate' type='password' name='password' id='password' placeholder="password"/>
+                            <input className='validate' type='password' name='password' id='password' defaultValue="****"/>
                         </div>
                         <div className="loginButtonContainer">
                             <button type='submit' name='createAccountButton'>login</button>
