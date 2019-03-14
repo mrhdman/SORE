@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import getPersonalWorkouts from '../../actions/getPersonalWorkouts';
 
-class WorkoutEntry extends Component{
+class GlobalWorkoutEntry extends Component{
     constructor(){
         super();
         this.state={
@@ -13,14 +13,14 @@ class WorkoutEntry extends Component{
         }
     }
 
-    trash = (e)=>{
-        // console.dir(e.target);
-        axios.get(`${window.apiHost}/personalworkouts/trash/${e.target.id}`).then((response)=>{
-            if(response.data.msg === "deleted"){
-                this.props.getPersonalWorkouts(this.props.auth.token)
-            }
-        })
-    }
+    // trash = (e)=>{
+    //     // console.dir(e.target);
+    //     axios.get(`${window.apiHost}/personalworkouts/trash/${e.target.id}`).then((response)=>{
+    //         if(response.data.msg === "deleted"){
+    //             this.props.getPersonalWorkouts(this.props.auth.token)
+    //         }
+    //     })
+    // }
 
     render(){
     const row = this.props.row;
@@ -31,7 +31,7 @@ class WorkoutEntry extends Component{
             <th className="repsRow">{row.reps}</th>
             <th className="weightRow">{row.weight}</th>
             <th className="notesRow">{row.notes}</th>
-            <th className="deleteRow" id={row.id} onClick={this.trash} >TRASH</th>
+            {/* <th className="deleteRow" id={row.id} onClick={this.trash} >TRASH</th> */}
         </tr>
         )
     }
@@ -48,4 +48,4 @@ function mapDispatchToProps(dispatcher){
     },dispatcher)
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(WorkoutEntry);
+export default connect(mapStateToProps,mapDispatchToProps)(GlobalWorkoutEntry);

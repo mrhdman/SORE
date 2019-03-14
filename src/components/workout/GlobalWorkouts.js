@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import WorkoutEntry from '../utility/WorkoutEntry';
+import GlobalWorkoutEntry from '../utility/GlobalWorkoutEntry';
 import axios from 'axios';
 
 class GlobalWorkouts extends Component{
@@ -22,7 +22,7 @@ componentDidMount(){
     render(){
         const workoutRows = this.state.workout.map((row,i) => {
             return(
-                <WorkoutEntry key={i} row={row} />
+                <GlobalWorkoutEntry key={i} row={row} />
             )
             })
         return(
@@ -45,7 +45,6 @@ componentDidMount(){
         )
     }
 }
-
 
 
 export default GlobalWorkouts;

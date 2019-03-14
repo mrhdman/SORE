@@ -20,13 +20,11 @@ componentDidMount(){
     if (this.props.auth.token){
         // console.log("test2")
         const data = this.props.getPersonalWorkouts(this.props.auth.token);
-        console.log(data)
     }
 }
 
     render(){
         console.log(this.props)
-        console.log(workouts)
         const workoutRows = this.props.workouts.map((row,i) => {
             console.log(row)
             return(
