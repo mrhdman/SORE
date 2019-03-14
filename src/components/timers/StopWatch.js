@@ -92,7 +92,7 @@ class StopWatch extends Component{
             <h1 className="TITLE">STOPWATCH</h1>
             <form onSubmit={this.submitToLog}>
                 <div>
-                    <input type='name' name='name' id='name' placeholder='Insert Name' />
+                    <input type='name' name='name' id='name' defaultValue='Name' />
                 </div>
                 <div className="buttonsAndClockContainer">
                     <div className="top-button-container">
@@ -101,11 +101,11 @@ class StopWatch extends Component{
                                 <button className="start-btn" type='button' onClick={this.startButtonClicked}></button>
                             </div>
                         </div>
-                        <div className="button-container">
+                        {/* <div className="button-container">
                             <div className="log-button">
                                 <button className="log-btn" type='submit' onClick={this.logButtonClicked}>LOG</button>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                         <div className="clock-container" type='llength' id='llength'>
@@ -129,24 +129,29 @@ class StopWatch extends Component{
                             </span>
                         </div>
                     <div className="bottom-button-container">
-                        <div className="button-container">
+                        {/* <div className="button-container">
                             <div className="reset-button">
                                 <button className="reset-btn" type='button' onClick={this.resetButtonClicked}>RESET</button>
                             </div>
-                        </div>
+                        </div> */}
                     
 
                         <div className="button-container">
                             <div className="stop-button">
-                                <button className="stop-btn" type='button' onClick={this.stopButtonClicked}></button>
+                                <button className="stop-btn" type='submit' onClick={this.stopButtonClicked}></button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <input type='text' name='notes' id='notes' placeholder='notes' />
+                    <input type='text' name='notes' id='notes' defaultValue='notes' />
                 </div>
             </form>
+                <div className="button-container">
+                    <div className="reset-button">
+                        <button className="reset-btn" type='button' onClick={this.resetButtonClicked}>RESET</button>
+                    </div>
+                </div>
         </div>
         )
     }
