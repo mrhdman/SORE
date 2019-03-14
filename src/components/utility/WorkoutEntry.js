@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -23,9 +23,9 @@ class WorkoutEntry extends Component{
     }
 
     render(){
-    const start = ""
-    const stop = ""
-    const time = "00:00:00"
+    // const start = ""
+    // const stop = ""
+    // const time = "00:00:00"
     const row = this.props.row;
     return(
         <tr>
@@ -34,10 +34,10 @@ class WorkoutEntry extends Component{
             <th className="repsRow">{row.reps}</th>
             <th className="weightRow">{row.weight}</th>
             <th className="notesRow">{row.notes}</th>
-            <th className="startRow">{start}</th>
+            {/* <th className="startRow">{start}</th>
             <th className="timeRow">{time}</th>
-            <th className="stopRow">{stop}</th>
-            <th className="deleteRow" id={row.id} onClick={this.trash} >DEL</th>
+            <th className="stopRow">{stop}</th> */}
+            <th className="deleteRow" id={row.id} onClick={this.trash} >TRASH</th>
         </tr>
         )
     }

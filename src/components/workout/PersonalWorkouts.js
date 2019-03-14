@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import WorkoutEntry from '../utility/WorkoutEntry';
-import axios from 'axios';
+// import axios from 'axios';
 import './workout.css';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -42,9 +42,9 @@ componentDidMount(){
                             <th>REPS</th>
                             <th>WEIGHT</th>
                             <th>NOTES</th>
-                            <th>START</th>
+                            {/* <th>START</th>
                             <th>TIME</th>
-                            <th>STOP</th>
+                            <th>STOP</th> */}
                             <th>DELETE</th>
                         </tr>
                     </thead>

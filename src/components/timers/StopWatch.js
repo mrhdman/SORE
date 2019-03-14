@@ -79,12 +79,12 @@ class StopWatch extends Component{
         let hours = Math.floor(count / 3600);
         let minutes = Math.floor((count-hours*3600) / 60);
         let seconds = Math.floor(count-hours*3600 - minutes*60);
-        let time = hours + ":" + minutes + ":" + seconds;
-        let date = new Date();
-        let dd = date.getDate();
-        let mm = date.getMonth() + 1;
-        let yyyy = date.getFullYear();
-        let todaysDate = mm + "/" + dd + "/" + yyyy;
+        // let time = hours + ":" + minutes + ":" + seconds;
+        // let date = new Date();
+        // let dd = date.getDate();
+        // let mm = date.getMonth() + 1;
+        // let yyyy = date.getFullYear();
+        // let todaysDate = mm + "/" + dd + "/" + yyyy;
         // console.log(this.props.auth)
 
         return(

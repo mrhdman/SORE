@@ -36,9 +36,9 @@ componentDidMount(){
                             <th>REPS</th>
                             <th>WEIGHT</th>
                             <th>NOTES</th>
-                            <th>START</th>
+                            {/* <th>START</th>
                             <th>TIME</th>
-                            <th>STOP</th>
+                            <th>STOP</th> */}
                         </tr>
                     </thead>
                     <tbody>

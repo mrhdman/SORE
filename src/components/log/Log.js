@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LogEntry from '../utility/LogEntry';
-import axios from 'axios';
+// import axios from 'axios';
 import './log.css'
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -39,9 +39,9 @@ componentDidMount(){
                             <th>NAME</th>
                             <th>TIME</th>
                             <th>DATE</th>
-                            <th>WEIGHT</th>
-                            <th>SETS</th>
-                            <th>REPS</th>
+                            {/* <th>WEIGHT</th> */}
+                            {/* <th>SETS</th> */}
+                            {/* <th>REPS</th> */}
                             <th>NOTES</th>
                             <th></th>
                         </tr>
