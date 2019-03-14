@@ -26,7 +26,7 @@ componentDidMount(){
     render(){
         console.log(this.props)
         const workoutRows = this.props.workouts.map((row,i) => {
-            console.log(row)
+            console.log(workoutRows)
             return(
                 <WorkoutEntry key={i} row={row} />
             )

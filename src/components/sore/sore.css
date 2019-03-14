@@ -5,7 +5,7 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
     border: .4em double white;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     display: inline-block;
 }
 .soreTitle button{
@@ -29,8 +29,8 @@
 }
 
 .leftBicep {
-    width: 2rem;
-    height: 2rem;
+    width: 4rem;
+    height: 4rem;
     background-color: white;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
@@ -39,8 +39,8 @@
     animation: leftBicepAnimation 10s infinite;
 }
 .rightBicep {
-    width: 2rem;
-    height: 2rem;
+    width: 4rem;
+    height: 4rem;
     background-color: white;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
@@ -68,18 +68,20 @@
     border-bottom-right-radius: 30%;
 }
 .leftFist {
-    width: .6rem;
-    height: 3rem;
+    width: 1rem;
+    height: 1.4rem;
     background-color: white;
     border-radius: 50%;
-    transform: translateY(1rem)
+    transform: translateY(.1rem);
+    border:  .1rem solid silver;
 }
 .rightFist {
-    width: .6rem;
-    height: 3rem;
+    width: 1rem;
+    height: 1.4rem;
     background-color: white;
     border-radius: 50%;
-    transform: translateY(1rem)
+    transform: translateY(.1rem);
+    border:  .1rem solid silver;
 }
 
 @keyframes leftFlexAnimation {
@@ -141,15 +143,51 @@
 
 
 @media only screen and (max-width: 500px){
-    /* .soreTitle {
-        border: none;
-        border-radius: 50%;
-    } */
-    /* .soreTitle button{
-        border: none;
-        font-size: .2rem;
-        border-radius: 50%;
-        background-color: black;
-        color: white;
-    } */
+    .soreTitle button{
+        animation: phoneLogoAnimation 10s infinite;
+    }
+    .leftForearmFistContainer {
+        animation: none;
+    }
+    .rightForearmFistContainer {
+        animation: none;
+    }
+    
+    .leftBicep {
+        width: 0rem;
+        height: 0rem;
+        animation: none;
+    }
+    .rightBicep {
+        width: 0rem;
+        height: 0rem;
+        animation: none;
+    }
+    .leftForearm {
+        width: 0rem;
+        height: 0rem;
+    }
+    .rightForearm {
+        width: 0rem;
+        height: 0rem;
+    }
+    .leftFist {
+        width: 0rem;
+        height: 0rem;
+    }
+    .rightFist {
+        width: 0rem;
+        height: 0rem;
+    }
+    @keyframes phoneLogoAnimation {
+        0% {
+            background-color: white;
+        }
+        50% {
+            background-color: red;
+        }
+        100% {
+            background-color: white;
+        }
+    }
 }
